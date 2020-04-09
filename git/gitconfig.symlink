@@ -1,7 +1,6 @@
 [user]
-	name = Matthew Jorgensen
-	email = matthew@jrgnsn.net
-	signingkey = 921646C547D65FB2
+	name = Justin Kalanchoe
+	email = hopkinsju@gmail.com
 [core]
 	excludesfile = ~/.gitignore
 	ignorecase = false
@@ -34,18 +33,10 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 [github]
-	user = mattjorgs
-[ghi]
-	token = !security find-internet-password -a mattjorgs -s github.com -l 'ghi token' -w
+	user = hopkinsju
 [commit]
-	gpgsign = true
+	gpgsign = false
 [gpg]
 	program = gpg
 [url "ssh://git@heroku.com/"]
 	insteadOf = https://git.heroku.com/
-[sendemail]
-    smtpServer = smtp.fastmail.com
-    smtpUser = matthew@jrgnsn.net
-    smtpEncryption = tls
-    smtpServerPort = 587
-	confirm = auto

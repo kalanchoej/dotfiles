@@ -217,7 +217,7 @@ install_dotfiles
 if [ "$WITH_XDG" = true ]; then
     install_xdg_config_dir
 fi
-# install_packages
-# detect_system
-# install_zsh
-# run_setup_scripts
+ #install_packages
+ #detect_system
+ #install_zsh
+ #run_setup_scripts
