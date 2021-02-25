@@ -22,8 +22,8 @@ killall Dock
 
 # http://osxdaily.com/2011/01/26/change-the-screenshot-save-file-location-in-mac-os-x/
 echo "Change screenshot location."
-mkdir -p ~/Screenshots
-defaults write com.apple.screencapture location ~/Screenshots/
+mkdir -p ~/Desktop/Screencaps
+defaults write com.apple.screencapture location ~/Desktop/Screencaps
 killall SystemUIServer
 
 # TODO: broken on macOS Sierra: https://github.com/mathiasbynens/dotfiles/issues/687 Set it manually in UI for now.

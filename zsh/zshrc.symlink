@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:~/.local/bin/:$HOME/.pyenv/shims/:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.dotfiles/oh-my-zsh
@@ -96,5 +96,28 @@ if [ -d "$HOME/.secrets" ]; then
     source ~/.secrets/env
 fi
 
-# heroku autocomplete setup
-HEROKU_AC_ZSH_SETUP_PATH=/Users/mjorgensen/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Workspace
+source $HOME/.local/bin/virtualenvwrapper.sh
+
+# Tell pyenv-virtualenvwrapper to use pyenv when creating new Python environments
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+
+# Set the pyenv shims to initialize
+if command -v pyenv 1>/dev/null 2>&1; then
+ eval "$(pyenv init -)"
+
+fi
+VIRTUALENVWRAPPER_PYTHON=/Users/hopkinsj/.pyenv/shims/python

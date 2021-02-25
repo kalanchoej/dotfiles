@@ -1,0 +1,1 @@
+ttyd -i 127.0.0.1 -t fontSize=11 -t fontFamily="Monaco" -t lineHeight="1.3" zsh &

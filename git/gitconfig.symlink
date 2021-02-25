@@ -1,8 +1,9 @@
 [user]
 	name = Justin Kalanchoe
-	email = hopkinsju@gmail.com
+	email = kalanchoej@gmail.com
+	signingkey = 70A4BD2B51336FB5
 [core]
-	excludesfile = ~/.gitignore
+	excludesFile = /Users/hopkinsj/.gitignore
 	ignorecase = false
 	pager = less -R
 	editor = vim
@@ -33,10 +34,14 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 [github]
-	user = hopkinsju
+	user = kalanchoej
 [commit]
-	gpgsign = false
+	gpgsign = true
 [gpg]
 	program = gpg
 [url "ssh://git@heroku.com/"]
 	insteadOf = https://git.heroku.com/
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
