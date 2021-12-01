@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:~/.local/bin/:$HOME/.pyenv/shims/:$PATH
+export PATH=$HOME/bin:/usr/local/bin:~/.local/bin/:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.dotfiles/oh-my-zsh
@@ -84,6 +84,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"export PATH="/usr/local/sbin:$PATH"
 
+alias sed=gsed
+alias web-ext-sign="web-ext sign --api-key=user:16784663:978 --api-secret=fd9badf3862bdb2ccb1133b7cb9d0bfb43e7e853792dd5094b8f1c14aa482f21 --channel=unlisted"
+
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 export VISUAL=vim
@@ -96,9 +99,6 @@ if [ -d "$HOME/.secrets" ]; then
     source ~/.secrets/env
 fi
 
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
@@ -108,16 +108,10 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Workspace
-source $HOME/.local/bin/virtualenvwrapper.sh
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-# Tell pyenv-virtualenvwrapper to use pyenv when creating new Python environments
-export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+export PATH="$HOME/.poetry/bin:$PATH"
 
-# Set the pyenv shims to initialize
-if command -v pyenv 1>/dev/null 2>&1; then
- eval "$(pyenv init -)"
-
-fi
-VIRTUALENVWRAPPER_PYTHON=/Users/hopkinsj/.pyenv/shims/python
+eval "$(atuin init zsh)"

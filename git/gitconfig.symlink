@@ -7,7 +7,6 @@
 	ignorecase = false
 	pager = less -R
 	editor = vim
-	hooksPath = ~/.git/hooks
 [color]
 	status = auto
 	diff = auto
@@ -36,7 +35,7 @@
 [github]
 	user = kalanchoej
 [commit]
-	gpgsign = true
+	gpgsign = false
 [gpg]
 	program = gpg
 [url "ssh://git@heroku.com/"]
