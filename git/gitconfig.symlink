@@ -3,7 +3,7 @@
 	email = kalanchoej@gmail.com
 	signingkey = 70A4BD2B51336FB5
 [core]
-	excludesFile = /Users/hopkinsj/.gitignore
+	excludesfile = /Users/kalanchoej/.gitignore
 	ignorecase = false
 	pager = less -R
 	editor = vim
@@ -44,3 +44,6 @@
 	rebase = false
 [init]
 	defaultBranch = main
+	templateDir = /Users/kalanchoej/.git-template
+[rerere]
+	enabled = true

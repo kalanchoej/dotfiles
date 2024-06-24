@@ -3,14 +3,14 @@
 
 # Hook created by Husky
 #   Version: 2.7.0
-#   At: 9/3/2021, 11:37:00 AM
+#   At: 1/4/2022, 12:18:22 PM
 #   See: https://github.com/typicode/husky#readme
 
 # From
-#   Directory: /Users/kalanchoej/Downloads/aktueller-rtl-hub/node_modules/husky
-#   Homepage: https://github.com/typicode/husky#readme
+#   Directory: /Users/kalanchoej/Downloads/bundle20211214-FIX-web-stories/node_modules/husky
+#   Homepage: undefined
 
-scriptPath="Downloads/aktueller-rtl-hub/node_modules/husky/run.js"
+scriptPath="Downloads/bundle20211214-FIX-web-stories/node_modules/husky/run.js"
 hookName=`basename "$0"`
 gitParams="$*"
 
@@ -40,7 +40,7 @@ if [ -f "$scriptPath" ]; then
     debug "source ~/.huskyrc"
     . ~/.huskyrc
   fi
-  Downloads/aktueller-rtl-hub/node_modules/run-node/run-node "$scriptPath" $hookName "$gitParams"
+  Downloads/bundle20211214-FIX-web-stories/node_modules/run-node/run-node "$scriptPath" $hookName "$gitParams"
 else
   echo "Can't find Husky, skipping $hookName hook"
   echo "You can reinstall it using 'npm install husky --save-dev' or delete this hook"
